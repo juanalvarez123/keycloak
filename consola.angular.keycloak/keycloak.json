@@ -1,0 +1,9 @@
+{
+  "realm": "master",
+  "realm-public-key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhSMLMsUOyQv3ICjeeMCJqbrXEUctjEC1N08sUGJElnJcP8MgkvxAlZBPP+emAa2sSFaaqnjTiIUAvtqCYNsuYOe7BSfES4ikr1F186cNJrFCP4f3VUG5SDLForBPfEVMjvNwR5Wuvg5U365yKcp9JbvBhU5t8QNsWZpMt093n/T8fnEKvoY+H0T9RBUf14yoNZt8kSjCuudfBZyXFHnEtJwkaPqbghtiCBJAWVE9mw1NcGHpQrc2dK+Gcic+ygAw/4NGwKqmUkx9FTiq2IElwSrhX56C5LKrpmvQUP56fJqPic6SoGIEcDX3dME31cv5vcxVOemZvLqAdJDu5hT8QQIDAQAB",
+  "auth-server-url": "http://localhost:8080/auth",
+  "ssl-required": "external",
+  "resource": "security-admin-console",
+  "public-client": true,
+  "enable-cors": true
+}

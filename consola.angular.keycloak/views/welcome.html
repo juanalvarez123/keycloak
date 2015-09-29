@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>consola.angular.keycloak</title>
+    <script src="../resources/js/angular/angular.js"></script>
+    <script src="../resources/js/angular/angular-resource.js"></script>
+    <script src="../resources/js/angular/angular-route.js"></script>
+    <script src="../resources/js/angular/ui-bootstrap-tpls-0.4.0.js"></script>
+    <script src="../resources/js/keycloak/keycloak.js"></script>
+    <script src="../resources/js/controllers/WelcomeController.js" type="text/javascript"></script>
+</head>
+<body ng-app="App" ng-controller="WelcomeController">
+	<h1>consola.angular.keycloak</h1>
+	<p>Bienvenido {{auth.authz.idTokenParsed.name}} !</p>
+	<p><strong>Token:</strong></p><p style=" font-size: 8pt;">{{auth.authz.token}}</p>
+
+	<br/>
+	<strong>Reinos (API REST keycloak)</strong>
+	<ul>
+		<li ng-repeat="reino in reinos">
+			<label>
+				<input type="radio" value="{{reino.realm}}" ng-model="$parent.reinoSeleccionado" name="grpReinos" ng-change="cargarDatos(reinoSeleccionado)" /> ID: {{reino.realm}} - Habilitado: {{reino.enabled}}
+			</label>
+		</li>
+	</ul>
+	<br/>
+	<strong>Clientes (API REST keycloak)</strong>
+	<ul>
+		<li ng-repeat="cliente in clientes">Client ID: {{cliente.clientId}} - Name: {{cliente.name}} - Protocolo: {{cliente.protocol}}</li>
+	</ul>
+	<br/>
+	<strong>Usuarios (API REST keycloak)</strong>
+	<ul>
+		<li ng-repeat="usuario in usuarios">Username: {{usuario.username}}</li>
+	</ul>
+	<br />
+	<a href="http://localhost:8080/auth/realms/master/tokens/logout?redirect_uri=http://localhost:8081/consola.angular.keycloak/">Cerrar sesión</a>
+</body>
+</html>
