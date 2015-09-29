@@ -9,6 +9,18 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>/WEB-INF/applicationContext.xml</param-value>
 	</context-param>
+	<context-param>
+	    <param-name>resteasy.scan</param-name>
+	    <param-value>false</param-value>
+	</context-param>
+	<context-param>
+	    <param-name>resteasy.scan.providers</param-name>
+	    <param-value>false</param-value>
+	</context-param>
+	<context-param>
+	    <param-name>resteasy.scan.resources</param-name>
+	    <param-value>false</param-value>
+	</context-param>
 
 	<listener>
 		<listener-class>
@@ -21,10 +33,10 @@
 		<servlet-class>
 			com.sun.jersey.spi.spring.container.servlet.SpringServlet
 		</servlet-class>
-		<init-param>
+		<!--<init-param>
 			<param-name>com.sun.jersey.config.property.packages</param-name>
 			<param-value>com</param-value>
-		</init-param>
+		</init-param>-->
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 
@@ -32,4 +44,26 @@
 		<servlet-name>jersey-serlvet</servlet-name>
 		<url-pattern>/rest/*</url-pattern>
 	</servlet-mapping>
+
+	<security-constraint>
+        <web-resource-collection>
+        	<web-resource-name>Servicio</web-resource-name>
+            <url-pattern>/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>Admin</role-name>
+            <role-name>User</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+	<login-config>
+		<auth-method>KEYCLOAK</auth-method>
+		<realm-name>demo</realm-name>
+	</login-config>
+	<security-role>
+		<role-name>Admin</role-name>
+	</security-role>
+	<security-role>
+		<role-name>User</role-name>
+	</security-role>
 </web-app>

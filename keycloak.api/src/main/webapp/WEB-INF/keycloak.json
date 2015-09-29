@@ -1,0 +1,9 @@
+{
+  "realm": "demo",
+  "realm-public-key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvsWxIfMqAeax5dfamHCd11+7KFI8bAlOJXlb3Fhl24E5QPtcMSVOuctGIIzzDiWqDxbeJLext+EaIFO+XqwEu1vLOEX7K3JQ0KLX6PgKrhC4PcmPDQB4+bAVagWRW1keQEOsslwp4+2mOqR9UOBQT2RAugzYOMCsDSDmOlgroDsdDSCMusICMmldaoKoEPm74X32Mu5y3/LXdNfHF1L2plm9TnuL4ggkKmyaLUK4Ktf8DrwwwEjeryj2BCh5o6YtI2m9HMkUKDz2a4iT4DgSc0XjQuAgdSrD/4n5so4ZibWCc7NsMaXaTi1njs7cd7/xaCQXJQ+CVK1Fqt/wwnjvIQIDAQAB",
+  "auth-server-url": "http://localhost:8080/auth",
+  "ssl-required": "external",
+  "resource": "keycloak.api",
+  "public-client": true,
+  "enable-cors": true
+}
