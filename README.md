@@ -66,4 +66,6 @@ Guia de uso keycloak: http://keycloak.github.io/docs/userguide/html/index.html
 
 API REST keycloak: http://keycloak.github.io/docs/rest-api/overview-index.html 
 
+OAuth 2.0 y las implementaciones realizadas: http://oauth.net/2/
+
 Implementaciones SSO: https://en.wikipedia.org/wiki/List_of_single_sign-on_implementations
