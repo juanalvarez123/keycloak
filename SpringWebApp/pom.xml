@@ -94,7 +94,7 @@
 		<dependency>
 			<groupId>org.keycloak</groupId>
 			<artifactId>keycloak-core</artifactId>
-			<version>2.5.5</version>
+			<version>4.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.keycloak</groupId>
